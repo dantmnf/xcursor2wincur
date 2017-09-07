@@ -60,4 +60,4 @@ if ARGV.length == 0
   puts "usage: #$0 files ..."
 end
 
-ARGV.each {|x| convert x rescue nil }
+ARGV.each {|x| convert x rescue puts "failed converting #{x}: #{$!.message}" }
